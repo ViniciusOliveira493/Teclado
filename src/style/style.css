@@ -1,0 +1,97 @@
+:root{
+    --background-color: #000000;
+    --key-active:rgb(179, 179, 179);
+}
+body{
+    background-image: linear-gradient(125deg,#7bb5e2,#1f53f0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+}
+
+main{
+    background-color: var(--background-color);
+    width: 70vw;
+    height: 50vh;
+    margin: auto;
+    margin-top: 15%;
+    border-radius: 20px;
+}
+
+#keyContainer{
+    width: 95%;
+    height: 90%;
+    margin: auto;
+    margin-top: 90px;
+}
+
+.key{   
+    display: inline-block;
+    user-select: none;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    transition: all .1s;
+    margin-right: 1px;
+    margin-top: 10px;
+}
+
+.white{
+    border-radius: 0 0 5px 5px;
+    background-color: aliceblue;
+    height: 100%;
+    width: 100px;
+    
+}
+
+.white:active{
+    background-color: var(--key-active);
+    border-radius: 0 0 10px 10px;
+}
+
+.active{
+    background-color: var(--key-active) !important;
+    border-radius: 0 0 10px 10px;
+}
+
+.black{
+    background-color: #000000;
+    border-radius: 0;
+    float: left;
+    position: absolute;
+    transform: translateX(-50%);
+    height: 25%;
+    width: 50px;
+    z-index: 2;
+}
+
+.black:active{
+    background-color: var(--key-active);
+    border-radius: 0;
+}
+
+@media (max-width:1300px) {
+    main{
+        width: 90vw;
+    }
+
+    .white{
+        width: 60px;
+        
+    }
+
+    .black{
+        width: 30px;
+    }
+}
+
+@media (max-width:700px) {
+    .white{
+        width: 50px;
+        
+    }
+
+    .black{
+        width: 25px;
+    }
+}
